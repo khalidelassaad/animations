@@ -12,7 +12,7 @@ def make_frame(t):
     global SPEED, ACCEL, DISP
     bouncefactor = 0.9
     r = 50
-    startheight = r
+    startheight = 51
     SPEED += ACCEL
     DISP += SPEED
     if (startheight + DISP + r) > 512:
@@ -26,6 +26,6 @@ def make_frame(t):
     return surface.get_npimage()
 
 clip = VideoClip(make_frame, duration = 10)
-clip.write_videofile("my_animation.mp4",fps=60)
+#clip.write_videofile("my_animation.mp4",fps=60)
 clip.write_gif("my_animation.gif",fps=24,program='ffmpeg')
 
