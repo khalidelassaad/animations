@@ -77,6 +77,6 @@ def make_frame(t):
     return surface.get_npimage()
 
 clip = VideoClip(make_frame, duration = DURATION)
-clip.write_videofile("my_animation.mp4",fps=FPS)
+#clip.write_videofile("my_animation.mp4",fps=FPS)
 clip.write_gif("my_animation.gif",fps=FPS,program='ffmpeg')
 
